@@ -1,0 +1,17 @@
+<div class="container hero__container">
+	{% for post in site.posts %}
+	<div class="row">
+	 	<div class="col-md-4 {% cycle 'pull-right', 'pull-left' %}">
+ 			<img src="{{ site.url }}/{{ post.author_img }}">
+	 	</div>
+        <div class="col-md-8 {% cycle 'pull-left', 'pull-right' %}">
+        	<blockquote class="testimonial">
+        		{{ post.content }}
+        	</blockquote>
+        	<span class="testimonial-author">
+        		{{ post.testimonial_author }}
+        	</span>                
+        </div>
+    </div>
+    {% endfor %}
+</div>
