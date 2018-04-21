@@ -1,8 +1,20 @@
-<footer class="site-footer">
+    <footer class="site-footer product-single__hero-container">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                    <p class="text-muted">{{ site.data.global.footer_text }}</p>
+                <div class="col-md-12 text-center">
+                    <h4 class="h3">
+                        See What Faith Can Do For You. 
+                    </h4>
+                    <div class="center-block">
+                        <form action="https://paul-tripp.myshopify.com/cart/add" method="post">
+                            <input type="hidden" name="id" value="39815533129" />
+                            <input type="hidden" name="price" value="59.99" />
+                            <input type="hidden" name="info" value="Bird fabric with black wood" />
+                            <input type="hidden" name="image" value="imageOfProduct.png" />
+                            <input type="hidden" name="return_to" value="back" />
+                            <input type="submit" class="btn btn-default btn-lg" value="Buy Now" />
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -12,7 +24,8 @@
     <!-- JavaScript -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <!-- <script src="{{ site.data.global.url }}/js/power.js"></script> -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="{{ site.url }}/js/landing-page.js"></script>
 
     </body>
 </html>

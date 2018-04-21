@@ -1,17 +1,30 @@
-<div class="container hero__container">
-	{% for post in site.posts %}
-	<div class="row">
-	 	<div class="col-md-4 {% cycle 'pull-right', 'pull-left' %}">
- 			<img src="{{ site.url }}/{{ post.author_img }}">
-	 	</div>
-        <div class="col-md-8 {% cycle 'pull-left', 'pull-right' %}">
-        	<blockquote class="testimonial">
-        		{{ post.content }}
-        	</blockquote>
-        	<span class="testimonial-author">
-        		{{ post.testimonial_author }}
-        	</span>                
-        </div>
-    </div>
-    {% endfor %}
+<div class="product-single__hero-container testimonials">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h3 class="h2 text-center"><strong>What People Are Saying About Paul</strong></h3>
+			</div>
+		</div>
+		<div class="testimonials-container">
+			{% for post in site.posts %}
+			<div class="row testimonials-item">
+				<div class="col-md-8 col-md-offset-2">
+				 	<div class="col-sm-6 col-md-4 hidden-xs testimonial-image {% cycle 'pull-right', 'pull-left' %}">
+			 			<img class="img-responsive" src="{{ site.url }}/{{ post.author_img }}">
+				 	</div>
+			        <div class="col-sm-6 col-md-8 testimonial-contents {% cycle 'pull-left', 'pull-right' %}">
+			        	<div class="testimonial-block">
+				        	<blockquote class="testimonial-content">
+				        		{{ post.content }}
+				        	</blockquote>
+				        	<span class="testimonial-author badge text-uppercase">
+				        		{{ post.testimonial_author }}
+				        	</span>
+			        	</div>
+			        </div>
+		        </div>
+		    </div>
+		    {% endfor %}
+		</div>
+	</div>
 </div>

@@ -40,6 +40,8 @@
     <!-- Fonts -->
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,400,400italic,700,700italic|Space+Mono:400,700">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ site.url }}/css/styles.css">
@@ -51,17 +53,16 @@
 </head>
 <body class="{{ post.title | downcase | replace:' ','-' | replace:',','' | strip_html }}{% if page.category %} category-{{ page.category }}{% endif %}{% if page.layout-class %} layout-{{ page.layout-class }}{% endif %}">
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/"> <img src="{{ site.url }}/assets/logo-small.png"/> <h1>{{ site.title }}</h1></a>
+                <a class="navbar-brand" href="/"> <img src="{{ site.url }}/assets/logo-small.png"/> <strong>{{ site.title }}</strong></a>
             </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="btn-container">
+                    <small class="visible-xs">Faith: What Are You Looking For?</small>
+                    <a href="#" class="btn btn-default btn-lg">Buy Now</a></li>
+            </ul>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     {% for item in site.nav.main %}
