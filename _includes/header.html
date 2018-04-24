@@ -56,9 +56,9 @@
     {
       "@context": "http://schema.org",
       "@type": "Organization",
-      "url": "{{ site.url }}",
+      "url": "{{ site.baseurl }}{{ site.url }}",
       "name": "{% if page.title %}{{ page.title }} † {{ site.title }}{% elsif post.title %}{{ post.title }} † {{ site.title }}{% else %}{{ site.title }} † {{ site.description }}{% endif %}",
-      "logo": "{{ site.url }}/logo-small.png"
+      "logo": "{{ site.baseurl }}{{ site.url }}/assets/logo-small.png"
     }
     </script>
 
