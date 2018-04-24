@@ -55,9 +55,10 @@
     <script type="application/ld+json">
     {
       "@context": "http://schema.org",
-      "@type": "Organization",
+      "@type": "Product",
       "url": "{{ site.baseurl }}{{ site.url }}",
-      "name": "{% if page.title %}{{ page.title }} † {{ site.title }}{% elsif post.title %}{{ post.title }} † {{ site.title }}{% else %}{{ site.title }} † {{ site.description }}{% endif %}",
+      "name": "{% if page.title %}{{ page.title }} † {{ site.title }}{% elsif post.title %}{{ post.title }} † {{ site.title }}{% else %}{{ site.title }}{% endif %}",
+      "description": "{% if page.description %}{{ page.description }} † {{ site.title }}{% elsif post.description %}{{ post.description }} † {{ site.title }}{% else %}{{ site.title }}{% endif %}",
       "logo": "{{ site.baseurl }}{{ site.url }}/assets/logo-small.png"
     }
     </script>
