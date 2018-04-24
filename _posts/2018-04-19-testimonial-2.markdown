@@ -1,6 +1,6 @@
 ---
 id: 3
-layout: post
+layout: default
 title:  "Testimonial 2"
 date:   2018-04-19 13:31:56 -0500
 categories: testimonial

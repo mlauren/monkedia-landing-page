@@ -34,6 +34,21 @@ a {
 small {
     @extend %spcmono;
 }
+aside {
+    font-size: 17px;
+    color: #525252;
+    margin: 16px 0;
+    @extend %spcmono;
+
+    span {
+        text-transform: uppercase;
+        margin: 0 5px;
+    }
+}
+pre {
+    margin: 75px -100px;
+}
+
 .btn {
     @extend %spcmono;
 }
@@ -49,16 +64,20 @@ h1, h2, h3, h4, h5, h6 { @extend %roboto; }
     background: #086AFF;
     color: #fff;
 }
+
 .inline-block {
     display: inline-block;
 }
-.inline, .visible-xs.inline {
-    display: inline!important;
+@media only screen and (max-width: 480px) {
+    .inline, .visible-xs.inline {
+        display: inline!important;
+    }
 }
 
 main {
     background-color: #041b2f;
 }
+
 nav.navbar {
     margin: 0;
     background-color: #0c304f;
@@ -111,6 +130,7 @@ nav.navbar {
         }
     }
 }
+
 .slick-slider {
     .slick-arrow:before {
         font: normal normal normal 14px/1 FontAwesome;
@@ -149,6 +169,15 @@ nav.navbar {
     }
 } 
 
+.product-price {
+    &__sale-label {
+        color: #f5b540;
+    }
+    &__sale {
+        color: #f5b540;
+    }
+}
+
 .product-single {
     &__hero-container {
         padding-top: 2em;
@@ -185,7 +214,7 @@ nav.navbar {
             h4, p {
                 color: gray;
             }
-            @media only screen and (min-width: 482px) {
+            @media only screen and (min-width: 769px) {
                 .about-bio-content {
                     margin-top: 3em;
                 }
@@ -262,33 +291,4 @@ nav.navbar {
         }
     }
 
-}
-
-.product-price {
-    &__sale-label {
-        color: #f5b540;
-    }
-    &__sale {
-        color: #f5b540;
-    }
-}
-
-aside {
-    font-size: 17px;
-    color: #525252;
-    margin: 16px 0;
-    @extend %spcmono;
-
-    span {
-        text-transform: uppercase;
-        margin: 0 5px;
-    }
-}
-
-.pagination-wrap {
-    text-align: center;
-}
-
-pre {
-    margin: 75px -100px;
 }

@@ -15,26 +15,26 @@
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
+    <!-- FaceBook meta tags -->
+    <meta property="og:url" content="{{ site.url }}" />
+    <meta property="og:title" content="{% if page.title %}{{ page.title }} † {{ site.title }}{% elsif post.title %}{{ post.title }} † {{ site.title }}{% else %}{{ site.title }} † {{ site.description }}{% endif %}" />
+    <meta property="og:type" content="product" />
+    <meta property="og:description" content="{% if page.description %}{{ page.description }} † {{ site.title }}{% elsif post.description %}{{ post.description }} † {{ site.title }}{% else %}{{ site.title }}{% endif %}" />
+    <meta property="og:image" content="" />
+
+    <!-- Twitter meta tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="{{ site.url }}">
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }} † {{ site.title }}{% elsif post.title %}{{ post.title }} † {{ site.title }}{% else %}{{ site.title }} † {{ site.description }}{% endif %}">
+    <meta name="twitter:description" content="{% if page.description %}{{ page.description }} † {{ site.title }}{% elsif post.description %}{{ post.description }} † {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta name="twitter:image" content="">
+
     <!-- RSS -->
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }} † {{ site.description }}" href="{{ site.url }}/feed.xml">
     <link rel="alternate" type="application/atom+xml" title="{{ site.title }} † {{ site.description }}" href="{{ site.url }}/atom.xml">
 
     <!-- Favicons -->
     <link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64 96x96" href="{{ site.url }}/favicon.ico">
-    <link rel="apple-touch-icon" sizes="57x57" href="{{ site.url }}/img/favicons/favicon-57.png">
-    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="{{ site.url }}/img/favicons/favicon-57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="{{ site.url }}/img/favicons/favicon-60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="{{ site.url }}/img/favicons/favicon-72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="{{ site.url }}/img/favicons/favicon-76.png">
-    <link rel="apple-touch-icon" sizes="96x96" href="{{ site.url }}/img/favicons/favicon-96.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="{{ site.url }}/img/favicons/favicon-114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="{{ site.url }}/img/favicons/favicon-120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="{{ site.url }}/img/favicons/favicon-144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="{{ site.url }}/img/favicons/favicon-152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ site.url }}/img/favicons/favicon-180.png">
-    <link rel="apple-touch-icon" sizes="192x192" href="{{ site.url }}/img/favicons/favicon-192.png">
-    <meta name="application-name" content="{{ site.title }} ♥ {{ site.description }}">
-    <meta name="msapplication-TileImage" content="{{ site.url }}/img/favicons/favicon-144.png">
     <meta name="msapplication-TileColor" content="#ffffff">
 
     <!-- Fonts -->
@@ -52,6 +52,15 @@
 
 </head>
 <body class="{{ post.title | downcase | replace:' ','-' | replace:',','' | strip_html }}{% if page.category %} category-{{ page.category }}{% endif %}{% if page.layout-class %} layout-{{ page.layout-class }}{% endif %}">
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "url": "{{ site.url }}",
+      "name": "{% if page.title %}{{ page.title }} † {{ site.title }}{% elsif post.title %}{{ post.title }} † {{ site.title }}{% else %}{{ site.title }} † {{ site.description }}{% endif %}"
+      "logo": "{{ site.url }}/logo-small.png"
+    }
+    </script>
 
     <nav class="navbar navbar-fixed-top">
         <div class="container-fluid">
