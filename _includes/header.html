@@ -20,18 +20,14 @@
     <meta property="og:title" content="{% if page.title %}{{ page.title }} † {{ site.title }}{% elsif post.title %}{{ post.title }} † {{ site.title }}{% else %}{{ site.title }} † {{ site.description }}{% endif %}" />
     <meta property="og:type" content="product" />
     <meta property="og:description" content="{% if page.description %}{{ page.description }} † {{ site.title }}{% elsif post.description %}{{ post.description }} † {{ site.title }}{% else %}{{ site.title }}{% endif %}" />
-    <meta property="og:image" content="{{ site.url }}/paul-tripp-fb-card.jpg" />
+    <meta property="og:image" content="{{ site.baseurl }}{{ site.url }}/paul-tripp-fb-card.jpg" />
 
     <!-- Twitter meta tags -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:url" content="{{ site.url }}">
     <meta name="twitter:title" content="{% if page.title %}{{ page.title }} † {{ site.title }}{% elsif post.title %}{{ post.title }} † {{ site.title }}{% else %}{{ site.title }} † {{ site.description }}{% endif %}">
     <meta name="twitter:description" content="{% if page.description %}{{ page.description }} † {{ site.title }}{% elsif post.description %}{{ post.description }} † {{ site.title }}{% else %}{{ site.title }}{% endif %}">
-    <meta name="twitter:image" content="{{ site.url }}/paul-tripp-fb-card.jpg">
-
-    <!-- RSS -->
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title }} † {{ site.description }}" href="{{ site.url }}/feed.xml">
-    <link rel="alternate" type="application/atom+xml" title="{{ site.title }} † {{ site.description }}" href="{{ site.url }}/atom.xml">
+    <meta name="twitter:image" content="{{ site.baseurl }}{{ site.url }}/paul-tripp-fb-card.jpg">
 
     <!-- Favicons -->
     <link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64 96x96" href="{{ site.url }}/favicon.ico">
