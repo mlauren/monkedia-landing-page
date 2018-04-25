@@ -6,7 +6,8 @@
 	  		dots: false
 		});
 
-		// https://paul-tripp.myshopify.com/cart
+		$('.add-product').on('submit', function(e) {
+			document.location.href='https://paul-tripp.myshopify.com/cart';
+		});
 	});
-
 }) (jQuery);
