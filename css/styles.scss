@@ -113,18 +113,16 @@ nav.navbar {
                 padding: 0 5px;
                 text-align: center;
             }
-            & > a {
-                &.btn {
-                    @media only screen and (min-width: 480px) {
-                        margin: {
-                            top: 8px;
-                            right: 30px;
-                        }
+            .btn {
+                @media only screen and (min-width: 480px) {
+                    margin: {
+                        top: 8px;
+                        right: 30px;
                     }
-                    margin: 5px 29px;
-                    &:hover {
-                        background-color: $secondary;
-                    }
+                }
+                margin: 5px 29px;
+                &:hover {
+                    background-color: $secondary;
                 }
             }
         }

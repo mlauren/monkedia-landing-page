@@ -5,5 +5,8 @@
 	  		slidesToScroll: 1,
 	  		dots: false
 		});
+
+		// https://paul-tripp.myshopify.com/cart
 	});
+
 }) (jQuery);
