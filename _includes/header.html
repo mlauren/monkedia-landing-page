@@ -17,16 +17,16 @@
 
     <!-- FaceBook meta tags -->
     <meta property="og:url" content="{{ site.baseurl }}{{ site.url }}" />
-    <meta property="og:title" content="{% if page.title %}{{ page.title }} † {{ site.title }}{% elsif post.title %}{{ post.title }} † {{ site.title }}{% else %}{{ site.title }} † {{ site.description }}{% endif %}" />
+    <meta property="og:title" content="{% if page.title %}{{ page.title }} † {{ site.title }}{% elsif post.title %}{{ post.title }} † {{ site.title }}{% else %}{{ site.title }}{% endif %}" />
     <meta property="og:type" content="product" />
-    <meta property="og:description" content="{% if page.description %}{{ page.description }} † {{ site.title }}{% elsif post.description %}{{ post.description }} † {{ site.title }}{% else %}{{ site.title }}{% endif %}" />
+    <meta property="og:description" content="{% if page.description %}{{ page.description }} † {{ site.title }}{% elsif post.description %}{{ post.description }} † {{ site.title }}{% else %}{{ site.description }}{% endif %}" />
     <meta property="og:image" content="{{ site.baseurl }}{{ site.url }}/paul-tripp-fb-card.jpg" />
 
     <!-- Twitter meta tags -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:url" content="{{ site.url }}">
-    <meta name="twitter:title" content="{% if page.title %}{{ page.title }} † {{ site.title }}{% elsif post.title %}{{ post.title }} † {{ site.title }}{% else %}{{ site.title }} † {{ site.description }}{% endif %}">
-    <meta name="twitter:description" content="{% if page.description %}{{ page.description }} † {{ site.title }}{% elsif post.description %}{{ post.description }} † {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }} † {{ site.title }}{% elsif post.title %}{{ post.title }} † {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta name="twitter:description" content="{% if page.description %}{{ page.description }} † {{ site.title }}{% elsif post.description %}{{ post.description }} † {{ site.title }}{% else %}{{ site.description }}{% endif %}">
     <meta name="twitter:image" content="{{ site.baseurl }}{{ site.url }}/paul-tripp-fb-card.jpg">
 
     <!-- Favicons -->
